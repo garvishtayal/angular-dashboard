@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Tac+One&display=swap');
+
+.container {
+  display: flex;
+  font-family: 'Quicksand';
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 20px;
+  height: 93vh;
+  width: 97%;
+  background-color: rgb(223, 230, 233);
+  
+}
+
+.left-bar {
+  width: 6%;
+  background-color: #8b8a8a;
+  border-top-left-radius: 10px;
+  border-end-start-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: glow 1.5s infinite alternate; /* Add animation */
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #8b8a8a; /* Start with a subtle glow */
+  }
+  100% {
+    box-shadow: 0 0 20px #8b8a8a; /* End with a more intense glow */
+  }
+}
+
+.left-bar h1 {
+  color: whitesmoke;
+  margin-top: 20px;
+  margin-bottom: 18px;
+}
+.left-bar span {
+  background-color: whitesmoke;
+  width: 100%;
+  height: 1px;
+}
+.main-container {
+  height: 97%;
+  width: 100%;  
+  background-color: white;
+  border-top-right-radius: 10px;
+  position: relative;
+}
+.header {
+  height: 13%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header img {
+  margin-right: 40px;
+  margin-left: 20px;
+  width: 30px;
+  border-radius: 10px;
+}
+.header h4 {
+  color: gray;
+}
+.title {
+  position: fixed;
+  width: 91.5%;
+  height: 12%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+h1 {
+  color: gray;
+}
+.title button {
+  background-color: rgba(255, 0, 0, 0.575);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 8px 12px;
+  font-family: 'Quicksand';
+  font-weight: 700;
+}
+.title button:hover {
+  background-color: rgba(255, 0, 0, 0.678);
+  cursor: pointer;
+}
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  width: 100%;
+  height: 90%;
+  border-end-end-radius: 10px;
+}
+table {
+  padding: 20px;
+  background-color: white;
+  width: 90%;
+  border-collapse: collapse;
+}
+table thead {
+  margin-bottom: 5px;
+}
+table thead th {
+  padding: 20px 10px;
+  text-align: start ;
+}
+table td {
+  padding: 6px 8px;
+}
+table tbody tr:hover {
+  background-color: rgba(211, 211, 211, 0.212);
+  cursor:default;
+  td button {
+    display: unset;
+  }
+}
+
+.edit-btn, .del-btn {
+  background-color: transparent;
+  padding: 3px 4px;
+  margin-right: 3px;
+  display: none;
+  border: none;
+  background-color: #ccc;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+svg {
+  width: 15px;
+  height: 15px;
+}
+table td button:hover{
+  svg{
+    fill: whitesmoke;
+  }
+}
+
+.edit-btn:hover {
+  background-color: rgb(149, 206, 224);
+}
+.del-btn:hover {
+  background-color: lightcoral;
+}
+
+
+.container.blur-background {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+.paging {
+  position: absolute;
+  bottom: 5%;
+  background-color: white;
+  width: 90%;
+  height: 10%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: coral;
+}
+.paging div {
+  margin-right: 15px;
+  cursor: pointer;
+}
+.paging div.active {
+  color: #8b8a8a;
+  font-weight: bold;
+}

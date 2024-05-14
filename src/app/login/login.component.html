@@ -1,0 +1,24 @@
+<div class="login-container">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <h2>Login</h2>
+
+    <input type="text" id="username" formControlName="username" placeholder="Username" autocomplete="off" spellcheck="false" required>
+    @if(loginForm.get('username')?.touched && !loginForm.get('username')?.value) {
+      <span class="error-message">
+        Username is required.
+      </span>
+    }
+
+    <input type="password" id="password" formControlName="password" placeholder="Password" autocomplete="off" spellcheck="false" required>
+    @if(loginForm.get('password')?.touched && !loginForm.get('password')?.value) {
+      <span class="error-message">
+        Username is required.
+      </span>
+    }
+
+    <button type="submit" >Login</button>
+
+  </form>
+</div>
+

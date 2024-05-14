@@ -1,0 +1,28 @@
+@if(oldUser) {
+  <form (ngSubmit)="submitUpdate()">
+    <div class="popup-container">
+      <div class="popup-content">
+        <h2>{{state}} user</h2>
+        <p (click)="cross()">X</p>
+        <div>
+          <label>Name:</label>
+          <input type="text" [(ngModel)]="UserInput.name" name="name" required>
+        </div>
+        <div>
+          <label>Username:</label>
+          <input type="text" [(ngModel)]="UserInput.username" name="username" required>
+        </div>
+        <div>
+          <label>Email:</label>
+          <input type="email" [(ngModel)]="UserInput.email" name="email" required>
+        </div>
+        <div>
+          <label>City:</label>
+          <input type="text" [(ngModel)]="UserInput.address.city" name="city" required>
+        </div>
+        <button type="submit">{{ state === 'add' ? 'Add' : 'Update' }}</button>
+      </div>
+    </div>
+  </form>
+  
+}
